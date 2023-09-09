@@ -7,9 +7,9 @@ Plugin Name: University Post Types
 function university_post_types()
 {
   register_post_type('event', array(
-    'rewrite' => array(
-      'slug' => 'events',
-    ),
+    'show_in_rest' => true,
+    'supports' => array('title', 'editor', 'excerpt'),
+    'rewrite' => array('slug' => 'events'),
     'has_archive' => true,
     'public' => true,
     // 'show_in_rest' => true,
